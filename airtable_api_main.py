@@ -3,6 +3,20 @@ from pyairtable import utils
 import requests
 import json
 import os
+from urllib.parse import urlparse
+
+def simplify_url(url):
+    parsed_url = urlparse(url)
+    domain = parsed_url.netloc
+
+    # Remove 'www.' if it exists
+    if domain.startswith('www.'):
+        domain = domain[4:]
+
+    # Remove port number if it exists
+    domain = domain.split(':')[0]
+
+    return domain
 
 def request_new(furl):
     requestBody = {
@@ -127,4 +141,4 @@ array = ['hiya.com']
 
 
 for i in array:
-    request_new(i)
+    request_new(simplify_url(i))
