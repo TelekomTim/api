@@ -96,6 +96,8 @@ def request_new(furl):
             "Tracxn Score": tracxn_score
             })
 
+            print(name)
+
 def update():
     result = table.all(fields=['URL'])
     
@@ -143,4 +145,6 @@ array = ['https://www.accelercomm.com/', 'https://amphenol-antennas.com/', 'http
 
 
 for i in array:
-    request_new(simplify_url(i))
+   request_new(simplify_url(i))
+
+   
