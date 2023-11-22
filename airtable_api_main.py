@@ -137,7 +137,9 @@ accessToken = os.environ.get('API_KEY_TRACXN')
 
 
 
-array = ['hiya.com']
+array = ['https://www.accelercomm.com/', 'https://amphenol-antennas.com/', 'https://www.antevianetworks.com/', 'https://www.attocore.com/', 'https://www.blackbeltdefence.com/', 'https://blackdice.io/', 'https://www.cambridgeconsultants.com/home', 'https://www.cellxica.net/'
+         , 'https://cenerva.com/', 'https://www.cerillion.com/', 'https://digis2.com/', 'https://www.i6c.co.uk/', 'https://www.korewireless.com/', 'https://www.lifecycle-software.com/', 'https://m2mdataconnect.com/', 'https://mdsglobal.com/', 'https://www.mobiliseonline.co.uk/', 'https://www.worldov.com/', 'https://pangea-group.net/'
+         , 'https://www.purelifi.com/', 'https://www.ranplanwireless.com/gb/', 'https://sbxgroup.com/kids/', 'https://www.sdi.co.uk/', 'https://smartroam.com/', 'https://www.speech-graphics.com/', 'https://squire-technologies.co.uk/', 'https://teletresearch.com/', 'https://www.tmtanalysis.com/', 'https://www.u-blox.com/en/', 'https://uktin.net/', 'https://www.vicinitysys.com/', 'https://wavemobile.net/', 'https://www.weaverlabs.io/', 'https://www.whptelecoms.com/', 'https://www.cablefree.net/']
 
 
 for i in array:
