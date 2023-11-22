@@ -30,7 +30,7 @@ def request_new(furl):
     res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
     result = res.json()
     # Ist die Anfrage leer? Dann nur url drucken
-    if result["result"]=="":
+    if result=="":
         table.create({
             "URL": furl,
         })
