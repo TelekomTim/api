@@ -131,17 +131,24 @@ def update():
 
 
 
+if os.environ.get('API_KEY_AIRTABLE') != "none":  
+    api = Api(os.environ.get('API_KEY_AIRTABLE'))
+    # Currently this is the MWC'24 Scouting Base
+    table = api.table("appIQwr4DelJi0HRI", "tblxZB7j9cgrLFk7q")
+else:
+    print("No Airtable API key found")
 
-api = Api(os.environ.get('API_KEY_AIRTABLE'))
-table = api.table("appIQwr4DelJi0HRI", "tblxZB7j9cgrLFk7q")
-requestUrl = "https://tracxn.com/api/2.2/companies"
-accessToken = os.environ.get('API_KEY_TRACXN')
+if os.environ.get('API_KEY_TRACXN') != "none":  
+    accessToken = os.environ.get('API_KEY_TRACXN')
+    requestUrl = "https://tracxn.com/api/2.2/companies"
+else:
+    print("No Tracxn API key found")
 
 
 
-array = ['https://www.accelercomm.com/', 'https://amphenol-antennas.com/', 'https://www.antevianetworks.com/', 'https://www.attocore.com/', 'https://www.blackbeltdefence.com/', 'https://blackdice.io/', 'https://www.cambridgeconsultants.com/home', 'https://www.cellxica.net/'
-         , 'https://cenerva.com/', 'https://www.cerillion.com/', 'https://digis2.com/', 'https://www.i6c.co.uk/', 'https://www.korewireless.com/', 'https://www.lifecycle-software.com/', 'https://m2mdataconnect.com/', 'https://mdsglobal.com/', 'https://www.mobiliseonline.co.uk/', 'https://www.worldov.com/', 'https://pangea-group.net/'
-         , 'https://www.purelifi.com/', 'https://www.ranplanwireless.com/gb/', 'https://sbxgroup.com/kids/', 'https://www.sdi.co.uk/', 'https://smartroam.com/', 'https://www.speech-graphics.com/', 'https://squire-technologies.co.uk/', 'https://teletresearch.com/', 'https://www.tmtanalysis.com/', 'https://www.u-blox.com/en/', 'https://uktin.net/', 'https://www.vicinitysys.com/', 'https://wavemobile.net/', 'https://www.weaverlabs.io/', 'https://www.whptelecoms.com/', 'https://www.cablefree.net/']
+array = ['www.aw2s.com ', 'https://www.billinglabs.io/', 'https://www.blacknut.biz/', 'www.caregame.com', 'https://www.dipli.com/en', 'https://evistel.com/', 'https://firecell.io/', 'https://www.iqsim.com/'
+         , 'https://en.it-development.com/', 'https://lillybelle.eu/', 'https://www.mvg-world.com/en', 'https://nuiva.com/', 'https://www.p1sec.com/corp/', 'https://planetworkint.com/', 'https://www.serma.com/', 'www.famoco.com', 'https://www.ineo-sense.com/', 'https://smartcom.com/', 'https://www.smartviser.com/', 'https://www.athesi.fr/language/en/company', 'https://www.bigben-connected.com/', 'https://www.dxomark.com/', 'https://ponant-technologies.com/'
+         , 'https://www.secure-ic.com/', 'skyted.fr', 'https://www.talkr.ai/en/', 'https://www.tinymdm.net/', 'https://www.enensys.com/', 'https://erase4good.com/', 'https://www.kizwork.com/', 'https://www.smsmode.com/']
 
 
 for i in array:
