@@ -146,9 +146,9 @@ else:
 
 
 
-array = ['www.aw2s.com ', 'https://www.billinglabs.io/', 'https://www.blacknut.biz/', 'www.caregame.com', 'https://www.dipli.com/en', 'https://evistel.com/', 'https://firecell.io/', 'https://www.iqsim.com/'
-         , 'https://en.it-development.com/', 'https://lillybelle.eu/', 'https://www.mvg-world.com/en', 'https://nuiva.com/', 'https://www.p1sec.com/corp/', 'https://planetworkint.com/', 'https://www.serma.com/', 'www.famoco.com', 'https://www.ineo-sense.com/', 'https://smartcom.com/', 'https://www.smartviser.com/', 'https://www.athesi.fr/language/en/company', 'https://www.bigben-connected.com/', 'https://www.dxomark.com/', 'https://ponant-technologies.com/'
-         , 'https://www.secure-ic.com/', 'skyted.fr', 'https://www.talkr.ai/en/', 'https://www.tinymdm.net/', 'https://www.enensys.com/', 'https://erase4good.com/', 'https://www.kizwork.com/', 'https://www.smsmode.com/']
+array = ['https://www.aircision.com/', 'https://www.audus.io/','https://www.capgemini.com/de-de/','https://chatlicense.com/','https://droonstra.com/','https://www.easywaytohealth.com/','https://fabriq.media/','www.tno.nl'
+         ,'https://www.i3d.net/','https://www.kpn.com/','https://www.linksight.nl/','https://mantispectra.com/','https://www.odd.bot/de','https://osindmeditech.com/','https://www.privatemobility.nl/','https://q-bird.nl/',
+         'https://qualinx.io/','https://www.seaborough.com/','https://www.senseglove.com/','https://skinive.com/','https://slimdesign.com/','https://techtradingpartners.com/','https://token-me.com/','https://www.tomtom.com/de_ch/navigation/','https://www.villari.nl/de','https://xelion.com/de/']
 
 
 for i in array:
