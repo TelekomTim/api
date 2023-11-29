@@ -146,7 +146,9 @@ else:
 
 
 
-array = ['https://www.wirepas.com/', 'https://www.hamina.com/','https://www.menturagroup.com/','https://www.efore.com/','https://creanord.com/','https://cumucore.com/','https://www.orbissystems.eu/','https://www.netradar.com/']
+array = ['www.greanstreams.com', 'www.eantc.de','www.fokus.fraunhofer.de','www.hhi.fraunhofer.de','www.rplg.io','www.moxz.tech','www.avow.tech',
+         'www.izm.fraunhofer.de','www.uniberg.com','www.nowtilus.tv','www.highstreet-technologies.com','https://www.avataa.com/','https://www.tubs.de/','https://acticom.de/',
+         'https://www.globaldots.com/','https://www.emnify.com/','https://www.amphiprion.com/']
 
 
 for i in array:
