@@ -150,8 +150,9 @@ else:
 
 
 
-array = ['www.greanstreams.com', 'www.eantc.de','www.fokus.fraunhofer.de','www.hhi.fraunhofer.de','www.rplg.io','www.moxz.tech','www.avow.tech',
-         'www.izm.fraunhofer.de','www.uniberg.com','www.nowtilus.tv','www.highstreet-technologies.com']
+array = ['https://1ot.com/', 'https://admirals.com/','https://adoptomedia.com/','https://bestsolutions.ee/','https://bambooapps.eu/','https://www.boku.com/',
+         'https://cyber.ee/','https://fleetcomplete.ee/','https://www.intertrust.com/','https://lab.mobi/','https://www.omnicomm-world.com/',
+         'https://www.skidsolutions.eu/en','https://velosiot.com/']
 
 
 for i in array:
