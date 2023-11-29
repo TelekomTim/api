@@ -6,6 +6,10 @@ import os
 from urllib.parse import urlparse
 
 def simplify_url(url):
+    # Check if the URL has a scheme. If not, prepend 'http://'.
+    if not urlparse(url).scheme:
+        url = 'http://' + url
+
     parsed_url = urlparse(url)
     domain = parsed_url.netloc
 
@@ -147,8 +151,7 @@ else:
 
 
 array = ['www.greanstreams.com', 'www.eantc.de','www.fokus.fraunhofer.de','www.hhi.fraunhofer.de','www.rplg.io','www.moxz.tech','www.avow.tech',
-         'www.izm.fraunhofer.de','www.uniberg.com','www.nowtilus.tv','www.highstreet-technologies.com','https://www.avataa.com/','https://www.tubs.de/','https://acticom.de/',
-         'https://www.globaldots.com/','https://www.emnify.com/','https://www.amphiprion.com/']
+         'www.izm.fraunhofer.de','www.uniberg.com','www.nowtilus.tv','www.highstreet-technologies.com']
 
 
 for i in array:
