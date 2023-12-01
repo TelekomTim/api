@@ -150,14 +150,22 @@ else:
 
 
 
-array = ['https://www.adtran.com/', 'https://www.allot.com', 'amplication.com', 'www.auto-talks.com', 'http://beamshaping.io/', 'https://www.ceragon.com', 'https://www.ceva-dsp.com', 
-         'https://www.d-id.com', 'https://drivenets.com', 'edgehawk.io', 'https://edgilityos.com/', 'https://www.everysight.com/', 'https://flolive.net', 'flycomm.co',
-            'www.friendly-tech.com', 'https://hiskysat.com/homepage/', 'https://www.is.com', 'https://mce.systems','https://mindcti.com','https://www.mtiwe.com','https://www.nexuce.com/',
-            'onelayer.com','https://www.pentenetworks.com','http://www.phinergy.com/','www.quantlr.com','https://roamability.com/','https://www.runel.net','sensorz.io',
-            'https://www.shieldiot.io/','www.sqreamtech.com','http://www.techsee.me/','https://www.telco.com','https://tupaia-pos.com/','https://www.wearabledevices.co.il/']
+array = ['https://www.6dtechnologies.com/', 'https://accurascan.com/', 'https://www.headspin.io/', 'https://livnsense.com/', 'https://niralnetworks.com/', 
+         'https://oel.in/', 'https://stl.tech/', 'https://www.subex.com/', 'https://www.tejasnetworks.com/', 'https://matrixshell.com/', 'http://www.iacuitytelco.com']
 
 
 for i in array:
    request_new(simplify_url(i))
 
    
+
+
+
+
+
+
+
+
+
+
+
