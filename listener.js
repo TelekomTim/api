@@ -1,15 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 22;
 
 app.use(bodyParser.json());
 
-app.post('/endpoint', (req, res) => {
+app.post('', (req, res) => {
   const receivedString = req.body.data;
   console.log('Received String:', receivedString);
 
   // Process the received string as needed
+    
 
   res.json({ message: 'String received successfully' });
 });
