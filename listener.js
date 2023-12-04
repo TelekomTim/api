@@ -3,6 +3,11 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+const cors = require('cors');
+
+app.use(cors()); // This will enable all CORS requests
+
+
 app.use(bodyParser.json());
 
 app.post('/myendpoint', (req, res) => {
