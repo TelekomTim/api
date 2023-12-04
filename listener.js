@@ -7,7 +7,10 @@ const cors = require('cors');
 
 app.use(cors()); // This will enable all CORS requests
 
-
+app.use((req, res, next) => {
+  res.setHeader('Content-Security-Policy', "default-src 'self'; script-src 'self' https://airtable.com; connect-src 'self' https://airtable.com;");
+  next();
+});
 app.use(bodyParser.json());
 
 app.post('/myendpoint', (req, res) => {
