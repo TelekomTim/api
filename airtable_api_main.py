@@ -150,8 +150,8 @@ else:
 
 
 
-array = ['https://www.6dtechnologies.com/', 'https://accurascan.com/', 'https://www.headspin.io/', 'https://livnsense.com/', 'https://niralnetworks.com/', 
-         'https://oel.in/', 'https://stl.tech/', 'https://www.subex.com/', 'https://www.tejasnetworks.com/', 'https://matrixshell.com/', 'http://www.iacuitytelco.com']
+array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2operate.com/','https://www.nordicesim.com/','https://miwire.net/',
+         'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
 
 
 for i in array:
