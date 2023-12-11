@@ -154,6 +154,18 @@ array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2oper
          'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
 
 
+result = table.all(fields=['URL'])
+
+for url in result:
+    requestBody = {
+    "filter":{
+        "domain":[
+            url["fields"]["URL"]
+            ]
+         }
+    } 
+
+
 for i in array:
    request_new(simplify_url(i))
 
