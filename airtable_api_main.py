@@ -198,8 +198,8 @@ else:
 array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2operate.com/','https://www.nordicesim.com/','https://miwire.net/',
          'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
 
-
-update()
+print(table.all(fields=['URL','Name']))
+#update()
 
 
 #for i in array:
