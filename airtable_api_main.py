@@ -109,7 +109,7 @@ def update():
         requestBody = {
             "filter":{
                 "domain":[
-                    url["fields"]["URL"]
+                    simplify_url(url["fields"]["URL"])
                     ]
                 }
             } 
