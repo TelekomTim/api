@@ -105,8 +105,8 @@ def request_new(furl):
 def update():
     result = table.all(fields=['URL','Name'])
     for x in result:
-        if result["Name"] != None:
-                result.pop("Name")
+        if result['fields']["Name"] != "tbu":
+                x.clear()
 
     for url in result:
         requestBody = {
@@ -198,8 +198,8 @@ else:
 array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2operate.com/','https://www.nordicesim.com/','https://miwire.net/',
          'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
 
-print(table.all(fields=['URL','Name']))
-#update()
+
+update()
 
 
 #for i in array:
