@@ -113,8 +113,11 @@ def update():
                     ]
                 }
             } 
+        print("--------------RequestBody: ", url["fields"]["URL"],requestBody, sep=' : ')
         tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
         tracxn_result = tracxn_res.json()
+        print("--------------Result:", url["fields"]["URL"],tracxn_result, sep=' : ' )
+        tracxn_result
         for company in tracxn_result.get("result", []):
             name = company.get('name', '')
             url = company.get('domain', '')
@@ -173,7 +176,6 @@ def update():
                 "Country": country,
                 "Tracxn Score": tracxn_score
             })
-            
             print(name)
         
 
