@@ -104,7 +104,7 @@ def request_new(furl):
 
 def update():
     result = table.all(view="TBU", fields=['URL'])
-    
+
     for url in result:
         requestBody = {
             "filter":{
@@ -115,7 +115,7 @@ def update():
             } 
         tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
         tracxn_result = tracxn_res.json()
-        for company in result.get("result", []):
+        for company in tracxn_result.get("result", []):
             name = company.get('name', '')
             url = company.get('domain', '')
         
