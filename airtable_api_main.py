@@ -111,6 +111,7 @@ def update():
                 x.clear()
         except:
             error_count += 1
+            x.clear()
             
     print(error_count)
 
