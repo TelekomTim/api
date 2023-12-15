@@ -115,75 +115,78 @@ def update():
     print(error_count)
 
     for url in result:
-        requestBody = {
-        "filter":{
-            "domain":[
-                url["fields"]["URL"]
-                ]
-            }
-        } 
-        tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
-        tracxn_result = tracxn_res.json()
-        for company in result.get("result", []):
-            name = company.get('name', '')
-            url = company.get('domain', '')
-    
-            try:
-                desc_l = company['description']['long']
-            except (KeyError, TypeError):
-                desc_l = ''
-
-            try:
-                desc_s = company['description']['short']
-            except (KeyError, TypeError):
-                desc_s = ''
-
-            try:
-                moneyraised = company['totalMoneyRaised']['totalAmount']['amount']
-            except (KeyError, TypeError):
-                moneyraised = 0
-            try:
-                foundedYear = company['foundedYear']
-            except(KeyError, TypeError):
-                foundedYear = '1000'
-
-            companyStage = company.get('stage', '')
-
-            try:
-                img = company['logos']['imageUrl']
-            except (KeyError, TypeError):
-                img = ''
-
-            try:
-                country = company['location']['country']
-            except (KeyError, TypeError):
-                country = ''
-            
-            try:
-                tracxn_score = company['tracxnScore']
-            except (KeyError, TypeError):
-                tracxn_score = 0    
-
-            categories = []
-            for businessModels in company.get("businessModelList", []):
-                try:
-                    categories.append(businessModels['name'])
-                except(KeyError, TypeError):
-                    test = ''
-            
-        table.update(url["id"], {
-            "Name": name,
-            "Description (long)": desc_l,
-            "Description (short)": desc_s,
-            "Money raised": moneyraised,
-            "Founded year": str(foundedYear) + "-01-01",
-            "Company Stage": companyStage,
-            "Logo": [utils.attachment(img)] if img else [],
-            "Country": country,
-            "Tracxn Score": tracxn_score
-        })
+        try:
+            requestBody = {
+            "filter":{
+                "domain":[
+                    url["fields"]["URL"]
+                    ]
+                }
+            } 
+            tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
+            tracxn_result = tracxn_res.json()
+            for company in result.get("result", []):
+                name = company.get('name', '')
+                url = company.get('domain', '')
         
-        print(name)
+                try:
+                    desc_l = company['description']['long']
+                except (KeyError, TypeError):
+                    desc_l = ''
+
+                try:
+                    desc_s = company['description']['short']
+                except (KeyError, TypeError):
+                    desc_s = ''
+
+                try:
+                    moneyraised = company['totalMoneyRaised']['totalAmount']['amount']
+                except (KeyError, TypeError):
+                    moneyraised = 0
+                try:
+                    foundedYear = company['foundedYear']
+                except(KeyError, TypeError):
+                    foundedYear = '1000'
+
+                companyStage = company.get('stage', '')
+
+                try:
+                    img = company['logos']['imageUrl']
+                except (KeyError, TypeError):
+                    img = ''
+
+                try:
+                    country = company['location']['country']
+                except (KeyError, TypeError):
+                    country = ''
+                
+                try:
+                    tracxn_score = company['tracxnScore']
+                except (KeyError, TypeError):
+                    tracxn_score = 0    
+
+                categories = []
+                for businessModels in company.get("businessModelList", []):
+                    try:
+                        categories.append(businessModels['name'])
+                    except(KeyError, TypeError):
+                        test = ''
+                
+            table.update(url["id"], {
+                "Name": name,
+                "Description (long)": desc_l,
+                "Description (short)": desc_s,
+                "Money raised": moneyraised,
+                "Founded year": str(foundedYear) + "-01-01",
+                "Company Stage": companyStage,
+                "Logo": [utils.attachment(img)] if img else [],
+                "Country": country,
+                "Tracxn Score": tracxn_score
+            })
+            
+            print(name)
+        except:
+            print('no field found (or different error)')
 
 
 
