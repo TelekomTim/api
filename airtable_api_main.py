@@ -104,9 +104,15 @@ def request_new(furl):
 
 def update():
     result = table.all(fields=['URL','Name'])
+    error_count = 0
     for x in result:
-        if x['fields']["Name"] != "tbu":
+        try:
+            if x['fields']["Name"] != "tbu":
                 x.clear()
+        except:
+            error_count += 1
+            
+    print(error_count)
 
     for url in result:
         requestBody = {
@@ -176,7 +182,8 @@ def update():
             "Country": country,
             "Tracxn Score": tracxn_score
         })
-            
+        
+        print(name)
 
 
 
