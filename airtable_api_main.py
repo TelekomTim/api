@@ -120,7 +120,7 @@ def update():
         tracxn_result
         for company in tracxn_result.get("result", []):
             name = company.get('name', '')
-            url = company.get('domain', '')
+            url_c = company.get('domain', '')
         
             try:
                     desc_l = company['description']['long']
