@@ -162,7 +162,7 @@ def update():
                 except(KeyError, TypeError):
                         test = ''
                 
-        table.update(url["id"], {
+            table.update(url["id"], {
                 "Name": name,
                 "Description (long)": desc_l,
                 "Description (short)": desc_s,
@@ -174,7 +174,7 @@ def update():
                 "Tracxn Score": tracxn_score
             })
             
-        print(name)
+            print(name)
         
 
 
