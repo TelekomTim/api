@@ -103,8 +103,10 @@ def request_new(furl):
             print(name)
 
 def update():
-    result = table.all(fields=['URL'])
-    
+    result = table.all(fields=['URL','Name'])
+    for x in result:
+        if result["Name"] != None:
+                result.pop("Name")
 
     for url in result:
         requestBody = {
@@ -116,7 +118,36 @@ def update():
         } 
         tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
         tracxn_result = tracxn_res.json()
-        for company in tracxn_result.get("result", []):
+        for company in result.get("result", []):
+            name = company.get('name', '')
+            url = company.get('domain', '')
+    
+            try:
+                desc_l = company['description']['long']
+            except (KeyError, TypeError):
+                desc_l = ''
+
+            try:
+                desc_s = company['description']['short']
+            except (KeyError, TypeError):
+                desc_s = ''
+
+            try:
+                moneyraised = company['totalMoneyRaised']['totalAmount']['amount']
+            except (KeyError, TypeError):
+                moneyraised = 0
+            try:
+                foundedYear = company['foundedYear']
+            except(KeyError, TypeError):
+                foundedYear = '1000'
+
+            companyStage = company.get('stage', '')
+
+            try:
+                img = company['logos']['imageUrl']
+            except (KeyError, TypeError):
+                img = ''
+
             try:
                 country = company['location']['country']
             except (KeyError, TypeError):
@@ -125,9 +156,23 @@ def update():
             try:
                 tracxn_score = company['tracxnScore']
             except (KeyError, TypeError):
-                tracxn_score = 0
+                tracxn_score = 0    
+
+            categories = []
+            for businessModels in company.get("businessModelList", []):
+                try:
+                    categories.append(businessModels['name'])
+                except(KeyError, TypeError):
+                    test = ''
             
         table.update(url["id"], {
+            "Name": name,
+            "Description (long)": desc_l,
+            "Description (short)": desc_s,
+            "Money raised": moneyraised,
+            "Founded year": str(foundedYear) + "-01-01",
+            "Company Stage": companyStage,
+            "Logo": [utils.attachment(img)] if img else [],
             "Country": country,
             "Tracxn Score": tracxn_score
         })
@@ -154,20 +199,11 @@ array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2oper
          'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
 
 
-result = table.all(fields=['URL'])
-
-for url in result:
-    requestBody = {
-    "filter":{
-        "domain":[
-            url["fields"]["URL"]
-            ]
-         }
-    } 
+update()
 
 
-for i in array:
-   request_new(simplify_url(i))
+#for i in array:
+ #  request_new(simplify_url(i))
 
    
 
