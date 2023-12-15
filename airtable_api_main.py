@@ -103,77 +103,66 @@ def request_new(furl):
             print(name)
 
 def update():
-    result = table.all(fields=['URL','Name'])
-    error_count = 0
-    for x in result:
-        try:
-            if x['fields']["Name"] != "tbu":
-                x.clear()
-        except:
-            error_count += 1
-            x.clear()
-            
-    print(error_count)
-
+    result = table.all(view="TBU", fields=['URL'])
+    
     for url in result:
-        try:
-            requestBody = {
+        requestBody = {
             "filter":{
                 "domain":[
                     url["fields"]["URL"]
                     ]
                 }
             } 
-            tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
-            tracxn_result = tracxn_res.json()
-            for company in result.get("result", []):
-                name = company.get('name', '')
-                url = company.get('domain', '')
+        tracxn_res = requests.post(requestUrl, headers={'accessToken': accessToken}, json=requestBody)
+        tracxn_result = tracxn_res.json()
+        for company in result.get("result", []):
+            name = company.get('name', '')
+            url = company.get('domain', '')
         
-                try:
+            try:
                     desc_l = company['description']['long']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     desc_l = ''
 
-                try:
+            try:
                     desc_s = company['description']['short']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     desc_s = ''
 
-                try:
+            try:
                     moneyraised = company['totalMoneyRaised']['totalAmount']['amount']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     moneyraised = 0
-                try:
+            try:
                     foundedYear = company['foundedYear']
-                except(KeyError, TypeError):
+            except(KeyError, TypeError):
                     foundedYear = '1000'
 
-                companyStage = company.get('stage', '')
+            companyStage = company.get('stage', '')
 
-                try:
+            try:
                     img = company['logos']['imageUrl']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     img = ''
 
-                try:
+            try:
                     country = company['location']['country']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     country = ''
                 
-                try:
+            try:
                     tracxn_score = company['tracxnScore']
-                except (KeyError, TypeError):
+            except (KeyError, TypeError):
                     tracxn_score = 0    
 
-                categories = []
-                for businessModels in company.get("businessModelList", []):
-                    try:
+            categories = []
+            for businessModels in company.get("businessModelList", []):
+                try:
                         categories.append(businessModels['name'])
-                    except(KeyError, TypeError):
+                except(KeyError, TypeError):
                         test = ''
                 
-            table.update(url["id"], {
+        table.update(url["id"], {
                 "Name": name,
                 "Description (long)": desc_l,
                 "Description (short)": desc_s,
@@ -185,9 +174,8 @@ def update():
                 "Tracxn Score": tracxn_score
             })
             
-            print(name)
-        except:
-            print('no field found (or different error)')
+        print(name)
+        
 
 
 
