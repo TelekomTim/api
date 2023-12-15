@@ -105,7 +105,7 @@ def request_new(furl):
 def update():
     result = table.all(fields=['URL','Name'])
     for x in result:
-        if result['fields']["Name"] != "tbu":
+        if x['fields']["Name"] != "tbu":
                 x.clear()
 
     for url in result:
