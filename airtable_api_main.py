@@ -196,8 +196,17 @@ else:
 
 
 
-array = ['www.gms-worldwide.com', 'www.nexustelecom.com','www.rdm.com','www.sharekey.com','www.telecom26.ch','www.threema.ch',
-         'www.mitto.ch','www.acurast.com','www.avatronics.com','www.modulos.ai','www.dynavisual.com','https://csky.ai','www.catnclever.com']
+array = ['http://www.acentury.co/','http://adtrackmedia.com/','http://www.ahead.io/','http://www.asigra.com/','http://www.avariwireless.com/',
+         'http://blinqnetworks.com/','http://www.canarymedical.com/','http://cemworks.com/','http://colonynetworks.com/',
+         'https://daanaa.com/','https://www.dejero.com/','http://www.earthsight.net/','https://www.expeto.io/','https://www.ferrotechnics.com/',
+         'https://www.fledge.health/','https://fx.land/','http://www.galtronics.com/','https://www.geotab.com/','https://www.incognito.com/',
+         'http://www.kloudville.com/','http://www.latencetech.com/','http://www.limegroup.ca/','http://www.linkwavewireless.com/','http://www.makahealth.com/',
+         'https://mantisxr.com/','http://www.mimik.com/','https://www.myndtx.com/','https://www.netskrt.io/','http://www.netsweeper.com/','https://novapex.ca/',
+         'https://www.noviflow.com/','https://www.one37id.com/','https://www.planethoster.com/','http://www.pxrlabs.com/','https://www.redoaktechnologies.ca/',
+         'http://www.rigstar.ca/','https://www.shabodi.com/','https://www.shapeimmersive.com/','https://simplyask.ai/','http://www.sinctech.com/','http://www.smoothtalker.com/',
+         'http://www.solace.ca/','http://www.sparkgeo.com/','https://www.starsolutions.com/','https://symend.com/','https://tektelic.com/','https://www.telesat.com/',
+         'https://thinkrf.com/','http://www.tieroneoss.com/','http://trulioo.com/','https://www.veltris.com/','http://viewpoint.ai/','https://www.viionsystems.com/',
+         'http://warrantylife.com/','http://www.wedgenetworks.com/']
 
 
 for i in array:
