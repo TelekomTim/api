@@ -196,25 +196,9 @@ else:
 
 
 
-array = ['https://advent.energy/', 'https://www.dencrypt.dk/','https://www.2operate.com/','https://www.nordicesim.com/','https://miwire.net/',
-         'https://www.intellifinder.dk/','https://www.energy-cool.com/','https://gatehousesatcom.com/']
+array = ['www.gms-worldwide.com', 'www.nexustelecom.com','www.rdm.com','www.sharekey.com','www.telecom26.ch','www.threema.ch',
+         'www.mitto.ch','www.acurast.com','www.avatronics.com','www.modulos.ai','www.dynavisual.com','https://csky.ai','www.catnclever.com']
 
 
-update()
-
-
-#for i in array:
- #  request_new(simplify_url(i))
-
-   
-
-
-
-
-
-
-
-
-
-
-
+for i in array:
+   request_new(simplify_url(i))
