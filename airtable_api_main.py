@@ -196,9 +196,10 @@ else:
 
 
 
-array = ['https://www.citymesh.com/','https://www.cm.com','https://www.eurofiber.com','https://www.fairphone.com/de/',
-         'https://cmrsurgical.com','https://antennex.tech/','https://www.luminostudio.com/','https://www.fusionlayer.com/','https://treon.fi/'
-         ,'https://www.visidon.fi/','https://www.vttresearch.com/en','https://www.oulu.fi/en','https://www.aalto.fi/en','https://www.helsinki.fi/en']
+array = ['https://www.appnext.com/','https://www.compiralabs.com/','https://driivz.com/','https://www.eyenet-mobile.com/','https://www.firstpoint-mg.com/'
+         ,'https://www.humains.com/','https://www.amos-spacecom.com/','https://www.talamoos.com/','https://webbingsolutions.com/','www.aw2s.com','www.famoco.com','https://enreach.com/serviceproviders','http://www.caregame.com','http://www.samea-innovation.com'
+         ,'www.cirpack.com','https://www.folan.net/en/','www.ums-rf.com','https://www.ipmfrance.fr/en/','https://splio.com','https://www.tablette-store.com/en/'
+         ,'www.utopya.com','www.dustmobile.com','www.spectronite.com','https://www.outsight.ai/']
 
 
 for i in array:
