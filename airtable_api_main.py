@@ -196,10 +196,7 @@ else:
 
 
 
-array = ['https://www.appnext.com/','https://www.compiralabs.com/','https://driivz.com/','https://www.eyenet-mobile.com/','https://www.firstpoint-mg.com/'
-         ,'https://www.humains.com/','https://www.amos-spacecom.com/','https://www.talamoos.com/','https://webbingsolutions.com/','www.aw2s.com','www.famoco.com','https://enreach.com/serviceproviders','http://www.caregame.com','http://www.samea-innovation.com'
-         ,'www.cirpack.com','https://www.folan.net/en/','www.ums-rf.com','https://www.ipmfrance.fr/en/','https://splio.com','https://www.tablette-store.com/en/'
-         ,'www.utopya.com','www.dustmobile.com','www.spectronite.com','https://www.outsight.ai/']
+array = ['https://aveq.info/','http://www.cubro.com/','http://www.mavoco.com/','https://phine.tech/','http://specure.com/','http://usound.com/']
 
 
 for i in array:
