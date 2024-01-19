@@ -196,7 +196,7 @@ else:
 
 
 
-array = ['https://aveq.info/','http://www.cubro.com/','http://www.mavoco.com/','https://phine.tech/','http://specure.com/','http://usound.com/']
+array = ['https://www.bondio.co','https://jobgrader.app/','https://www.goava.ai/','https://equipme.io/','https://phytunes.com/','https://www.aeriu.co/','https://www.blinkin.io/','https://mymanu.com/']
 
 
 for i in array:
