@@ -196,8 +196,11 @@ else:
 
 
 
-array = ['https://www.bondio.co','https://jobgrader.app/','https://www.goava.ai/','https://equipme.io/','https://phytunes.com/','https://www.aeriu.co/','https://www.blinkin.io/','https://mymanu.com/']
+#array = ['https://www.bondio.co','https://jobgrader.app/','https://www.goava.ai/','https://equipme.io/','https://phytunes.com/','https://www.aeriu.co/','https://www.blinkin.io/','https://mymanu.com/']
 
 
-for i in array:
-   request_new(simplify_url(i))
+#for i in array:
+   #request_new(simplify_url(i))
+    
+
+update()
