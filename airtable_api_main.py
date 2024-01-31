@@ -196,11 +196,16 @@ else:
 
 
 
-#array = ['https://www.bondio.co','https://jobgrader.app/','https://www.goava.ai/','https://equipme.io/','https://phytunes.com/','https://www.aeriu.co/','https://www.blinkin.io/','https://mymanu.com/']
+array = ['www.microdatacenter.kr','www.artygenspace.com','www.aimbroad.com','www.sunwoo.net','kms-p.com','www.gaudiolab.com','removing.co.kr',
+         'www.satena.co.kr','www.lablup.com','wkit.co.kr','www.deepx.ai','www.mobilint.com','roborisen.com','https://www.i-screamedu.co.kr/',
+         'iaan.co.kr','www.esongemc.com','http://www.ubcs.co.kr/','www.deepbrain.io','www.sps-itd.com','www.gdflab.com','https://drome1123.wixsite.com/dromii',
+         'www.tisc.co.kr','https://www.payplug.co.kr/','https://vplate.io','www.globalcit.co.kr','www.linkface.co','www.hyodol.com','ninewatt.com',
+         'www.cellico.com','https://gooroomee.com/','http://luxrobo.com/','petnow.io']
 
 
-#for i in array:
-   #request_new(simplify_url(i))
+
+for i in array:
+   request_new(simplify_url(i))
     
 
-update()
+
