@@ -196,11 +196,7 @@ else:
 
 
 
-array = ['www.microdatacenter.kr','www.artygenspace.com','www.aimbroad.com','www.sunwoo.net','kms-p.com','www.gaudiolab.com','removing.co.kr',
-         'www.satena.co.kr','www.lablup.com','wkit.co.kr','www.deepx.ai','www.mobilint.com','roborisen.com','https://www.i-screamedu.co.kr/',
-         'iaan.co.kr','www.esongemc.com','http://www.ubcs.co.kr/','www.deepbrain.io','www.sps-itd.com','www.gdflab.com','https://drome1123.wixsite.com/dromii',
-         'www.tisc.co.kr','https://www.payplug.co.kr/','https://vplate.io','www.globalcit.co.kr','www.linkface.co','www.hyodol.com','ninewatt.com',
-         'www.cellico.com','https://gooroomee.com/','http://luxrobo.com/','petnow.io']
+array = ['https://nuralogix.ai/','https://www.mercku.com/','','','','','','','','','','','','','','','','','']
 
 
 
